@@ -1,0 +1,28 @@
+.notification-item {
+    background-color: #a5d6a7; /* Couleur de fond vert */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce */
+    border-radius: 8px; /* Coins arrondis */
+    width: 200px; /* Largeur fixe */
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    display: flex; /* Flexbox pour centrer le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    margin: 8px 0; /* Marge entre les notifications */
+    text-align: center; /* Centre le texte */
+    padding: 16px; /* Padding pour un peu d'espace autour du texte */
+    font-size: 16px; /* Taille de police moyenne */
+    line-height: 1.5; /* Espacement des lignes */
+    word-wrap: break-word; /* Permet le retour à la ligne si nécessaire */
+}
+
+.notification-item:hover {
+    background-color: #81c784; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation au survol */
+}
+
+/* Styles supplémentaires pour un meilleur look du menu */
+.MuiMenu-paper {
+    max-height: 400px; /* Hauteur maximale */
+    overflow-y: auto; /* Défilement si trop de notifications */
+}
+

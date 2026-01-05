@@ -1,0 +1,16 @@
+.notification-item {
+    background-color: #a5d6a7; /* Green accent background */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.notification-item:hover {
+    background-color: #81c784; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale up on hover */
+}
+
+/* Add additional styles for a better menu look */
+.MuiMenu-paper {
+    max-height: 400px; /* Set a max height */
+    overflow-y: auto; /* Enable scrolling if too many notifications */
+}

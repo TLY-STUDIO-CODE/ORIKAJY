@@ -1,0 +1,11 @@
+
+
+.content1{
+    background-color: #fff;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 50vw;
+    min-height: 480px;
+    max-width: 100%;
+}

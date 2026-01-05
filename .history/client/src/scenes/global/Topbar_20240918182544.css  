@@ -1,0 +1,17 @@
+.ori-kajy-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.notification-icon, .settings-icon {
+    transition: transform 0.2s ease;
+}
+
+.notification-icon:hover, .settings-icon:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+

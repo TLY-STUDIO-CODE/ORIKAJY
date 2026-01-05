@@ -1,0 +1,64 @@
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-menu {
+  border-radius: 10px;
+  padding: 0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform-origin: top right;
+  animation: slideDown 0.3s ease-out;
+  min-width: 300px;
+}
+
+.notification-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  font-size: 14px;
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+  background-color: #f0f2f5;
+}
+
+.no-notifications {
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Queue (flèche) pour connecter le menu à l'icône */
+.notification-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation pour le dropdown */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

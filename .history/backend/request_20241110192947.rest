@@ -1,0 +1,420 @@
+// Create a User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "M Fikri",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// Get All User
+GET http://localhost:5000/users
+
+###
+// Get Singe User
+GET http://localhost:5000/users/4a78f4bd-7792-4986-b5cd-52efa3885ac6
+
+###
+// Update a User 
+PATCH http://localhost:5000/users/4a78f4bd-7792-4986-b5cd-52efa3885ac6
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "john@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete a User
+DELETE http://localhost:5000/users/cdb73333-6616-4907-a841-9d7adf341a26
+
+###
+// Login a User as Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "tahianafiononana@gmail.com",
+    "password": "007ARENA007"
+}
+
+###
+// Login a User as Simple User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "yasser@gmail.com",
+    "password": "123456"
+}
+
+###  
+// ME Show unique Information (Admin or Simple user)
+GET http://localhost:5000/me
+
+### 
+// Logout (Admin and user)
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Signe Products
+GET http://localhost:5000/products/1cf9b8a4-c2b5-4e88-90b8-3aa290985220
+
+###  
+// Post Data Product (Create Product)
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 999
+}
+
+###  
+// Update Product
+PATCH  http://localhost:5000/products/502eb6be-1942-4d30-a727-af22b5e8157a
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 974
+}
+
+###  
+// Delete Product
+DELETE http://localhost:5000/products/
+
+###  
+//Get All Stock
+GET http://localhost:5000/stocks
+
+###  
+// Create stock
+POST http://localhost:5000/stocks
+Content-Type: application/json
+
+{
+    "name": "HP pro",
+    "name_four": "Computer Store",
+    "qte": "50",
+    "categories": "Ordinateur portable",
+    "num_fact": "0055555555" 
+}
+
+###  
+//Get Single Stock
+GET http://localhost:5000/stocks/75344a0d-e9f4-4541-ac15-1322bd25e517
+
+###  
+// Update Stock
+PATCH http://localhost:5000/stocks/75344a0d-e9f4-4541-ac15-1322bd25e517
+Content-Type: application/json
+
+{
+    "name": "LENOVO",
+    "name_four": "Computer Store",
+    "qte": "50",
+    "categories": "Ordinateur portable",
+    "num_fact": "0011111111"
+    
+}
+
+###  
+//delete Single Stock
+DELETE http://localhost:5000/stocks/b1df5a52-d921-4605-84cf-4c14bff6e5b6
+
+###  
+// GET Event
+GET http://localhost:5000/events
+
+### 
+// Creat event
+POST http://localhost:5000/events
+Content-Type: application/json
+
+{
+    "title": "Develeoppement 3",
+    "start": "2024-08-29",
+    "end": "2024-08-31"
+}
+
+###  
+//Get Single event
+GET http://localhost:5000/events/56be125f-eb03-4ce3-9835-b2f56cd16d70
+
+###  
+// Update event
+PATCH http://localhost:5000/events/b02bbc61-2b99-4ae1-8703-bfc3e76a5a8e
+Content-Type: application/json
+
+{
+    "title": "Develeoppement update",
+    "start": "2024-08-29"
+}
+
+
+
+###  
+//delete Single event
+DELETE http://localhost:5000/events/d85d1783-e5f8-444a-a5cc-22a790d8bef9
+
+
+###  
+//Get All Achat
+GET http://localhost:5000/achats
+
+###  
+//delete Single achat
+DELETE http://localhost:5000/achats/b598c11e-bf9c-4c9c-bda4-700ac8e91541
+###  
+// Create acaht
+POST http://localhost:5000/achats
+Content-Type: application/json
+
+{
+    "name": "LENOVO",
+    "name_four": "Computer Store",
+    "description": "Achat ordinateur portable",
+    "qte": "10",
+    "montant": 2000.00,
+    "categories": "Ordinateur portable",
+    "date_achat": "2024-09-03",
+    "num_factA": "0011111111",
+    "stockId": 1
+}
+
+###  
+// update acaht
+PATCH http://localhost:5000/achats/81fe5897-5432-4ca2-9f26-49a5597ebc47
+Content-Type: application/json
+
+{
+    "name": "LENOVO",
+    "name_four": "Computer Store",
+    "description": "Achat ordinateur portable",
+    "qte": "11",
+    "montant": 2000.00,
+    "categories": "Ordinateur portable",
+    "date_achat": "2024-09-02",
+    "num_fact": "0055555555",
+    "stockId": 1
+}
+
+
+
+###  
+//Get All Vente
+GET http://localhost:5000/commandes
+
+###  
+//delete Single vente
+DELETE http://localhost:5000/ventes/b3639c11-e19b-4b44-85a4-7173a145a6f5
+// Create vente
+###
+POST http://localhost:5000/ventes
+Content-Type: application/json
+
+{
+    "name": "LENOVO",
+    "name_client": "Andry",
+    "description": "Achat ordinateur portable",
+    "qte": "1",
+    "montant": 1000.00,
+    "categories": "Ordinateur portable",
+    "date_vente": "2024-09-03",
+    "num_factV": "0011111111",
+    "stockId": 1
+}
+###  
+// Update vente
+PATCH http://localhost:5000/ventes/c6a2025d-008b-4af2-9c71-076018bba3bd
+Content-Type: application/json
+
+{
+    "name": "LENOVO",
+    "name_client": "Andry",
+    "description": "Achat ordinateur portable",
+    "qte": "",
+    "montant": ,
+    "categories": "Ordinateur portable",
+    "date_vente": "2024-09-02",
+    "num_factV": "0011111111",
+    "stockId": 1
+}
+
+
+###  
+//Get All transaction
+GET http://localhost:5000/transactions
+
+###  
+//delete Single transaction
+DELETE http://localhost:5000/transactions/c9ae5906-fbdf-4117-a314-cd9527f33cf5
+###
+// Create transaction
+POST http://localhost:5000/transactions
+Content-Type: application/json
+
+{
+    "description_transaction": "Achat ordinateur portable 1",
+    "montant_transaction": 2000000.00,
+    "type_transaction": "Achat",
+    "date_transaction": "2024-09-06"
+}
+
+###  
+// update transaction
+PATCH http://localhost:5000/transactions/38a2a5de-d166-4b10-be8e-1917f8c056fe
+Content-Type: application/json
+
+{
+    "description_transaction": "Achat ordinateur portable 1",
+    "montant_transaction": 4000000.00,
+    "type_transaction": "Achat",
+    "date_transaction": "2024-09-06"
+}
+
+###  
+//Get revenu by date
+GET http://localhost:5000/revenus/"2024-09-18"
+
+###  
+//Get All revenu
+GET http://localhost:5000/revenus
+
+###  
+//Get totalvente by date
+GET http://localhost:5000/benefice
+
+
+
+###  
+//Get All transaction
+GET http://localhost:5000/depenses/"2024-09-17"
+
+
+###  
+//Get All transaction
+GET http://localhost:5000/benefice/"2024-09-17"
+
+###
+// Create Ecriture comptable
+POST http://localhost:5000/accounting-entries
+Content-Type: application/json
+
+{
+    "date": "2024-09-21",
+    "description": "Achat des matériels",
+    "amount": 2000000.00,
+    "journalName": "Journal des achats 2024"
+    
+}
+
+
+###  
+//Get All transaction
+GET http://localhost:5000/accounting-entries/3268263f-16ca-44b6-a7dc-0431d22eb6e1
+
+###
+DELETE http://localhost:5000/accounting-entries/9fa76964-6580-40c9-9278-3e6dc2f1a601
+
+###
+// Create Ecriture comptable
+POST http://localhost:5000/journals
+Content-Type: application/json
+
+{
+    "name": "Journal des achats 2024"
+}
+###  
+//Get All transaction
+GET http://localhost:5000/journals
+
+
+###  
+//Get All transaction
+PATCH http://localhost:5000/journals/5cc16489-4d13-45e4-9750-ea130a31be6f
+Content-Type: application/json
+
+{
+    "name": "Journal des ventes 2024"
+}
+###  
+//Get All transaction
+DELETE http://localhost:5000/journals/2c887917-80ce-4269-8d95-6cb253972f20
+
+###
+// Create Ecriture comptable
+POST http://localhost:5000/journals/assign-entries
+Content-Type: application/json
+
+{
+    "journalName": "Journal de vente",
+    "description": "Achat de matériel 2"
+}
+###
+POST http://localhost:5000/journals/assign-entries
+Content-Type: application/json
+
+{
+    "journalName": "Journal d'achat",
+    "description": "Achat de matériel "
+}
+
+
+###  
+// update transaction
+PATCH http://localhost:5000/
+
+###  
+//Get compte
+GET http://localhost:5000/audits
+
+
+###  
+//Get compte
+PATCH http://localhost:5000/accounts/85b45a1f-0b18-4b68-8aa8-e703c1e6a28b
+Content-Type: application/json
+
+{
+    "name": "Compte bnacaire",
+    "type": "Actif"
+}
+###  
+//Get compte
+DELETE http://localhost:5000/accounts/85b45a1f-0b18-4b68-8aa8-e703c1e6a28b
+
+###
+// Create compte
+POST http://localhost:5000/accounts
+Content-Type: application/json
+
+{
+    "name": "Compte de trésorie",
+    "type": "Actif"
+}
+
+###
+// Create compte
+POST http://localhost:5000/balances
+Content-Type: application/json
+
+{
+    "name": "Compte de trésorie",
+    "type": "Actif",
+    "amount": 500.00
+}
+###
+//Get compte
+GET http://localhost:5000/transactions/count

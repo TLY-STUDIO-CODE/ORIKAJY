@@ -1,0 +1,32 @@
+.notification-menu {
+    margin-top: 8px; /* Espacement entre l'icône et le menu */
+}
+
+.notification-container {
+    background-color: #011d3b0a; /* Couleur de fond bleu accent */
+    border-radius: 8px; /* Rayon de bordure */
+    box-shadow: 0 4px 8px #00000033; /* Ombre pour le menu */
+}
+
+.notification-item {
+    color: #ffffffbe; /* Couleur du texte */
+    border-radius: 8px; /* Rayon de bordure pour chaque élément du menu */
+    padding: 8px 16px; /* Espacement intérieur */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.notification-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de survol */
+}
+
+/* Ajouter une animation de queue (triangle) */
+.notification-container::after {
+    content: '';
+    position: absolute;
+    top: -8px; /* Ajuster la position de la queue */
+    left: calc(50% - 8px); /* Centrer la queue */
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #007bff transparent; /* Couleur de la queue */
+}
+

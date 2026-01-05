@@ -1,0 +1,58 @@
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-menu {
+  border-radius: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+  backdrop-filter: blur(10px); /* Pour les autres navigateurs compatibles */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform-origin: top right;
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.notification-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Glassmorphism */
+.notification-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(255, 255, 255, 0.2);
+  filter: blur(1px);
+}
+
+/* Animation for the dropdown */
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

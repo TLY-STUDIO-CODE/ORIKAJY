@@ -1,0 +1,27 @@
+.notification-container {
+    position: relative; /* Position relative pour contenir les notifications */
+    overflow: hidden; /* Cache le débordement */
+    width: 100%; /* Largeur du conteneur */
+    height: auto; /* Hauteur automatique */
+    background-color: transparent; /* Transparent pour le fond du menu */
+}
+
+.notification-item :pauseOnHover {
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    animation: scroll 15s linear infinite; /* Animation de défilement */
+    font-size: 16px; /* Taille de police moyenne */
+    color: #66bb6a; /* Vert accentué */
+    margin: 0; /* Pas de marge */
+    padding: 0; /* Pas de padding */
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Commence à droite */
+    }
+    100% {
+        transform: translateX(-100%); /* Se termine à gauche */
+    }
+}
+
